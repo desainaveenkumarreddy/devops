@@ -1,6 +1,6 @@
 #!bin/bash
 
-Movies=("xxx" "xnxx" "xvideos" "kamasutra")#Space is important between arrays
+Movies=("xxx" "xnxx" "xvideos" "kamasutra")
 
 #size of above array is 4
 #index of above array is 0,1,2,3
