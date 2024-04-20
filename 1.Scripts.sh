@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#PERSON1=Ramesh
-#PERSON2=Suresh
+PERSON1=Ramesh
+PERSON2=Suresh
 
-echo "Ramesh:: Hi Suresh"
-echo "Suresh:: hello Ramesh"
-echo "Suresh:: Fuckoff Ramesh"
-echo "Ramesh:: i will fuck ur sister badly Suresh"
+echo "$PERSON1:: Hi $PERSON2"
+echo "$PERSON2:: hello $PERSON1"
+echo "$PERSON2:: Fuckoff $PERSON1"
+echo "$PERSON1:: i will fuck ur sister badly $PERSON2"
