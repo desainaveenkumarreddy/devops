@@ -13,8 +13,8 @@
 Person1=$1
 Person2=$2   
 
-Echo "$Person1:: Hi $Person2, how are you"
-Echo "$Person2:: I am dng good, what about u $Person1"
-Echo "$Person1:: that's good to hear, where are u now ..? "
-Echo "$Person2:: I am in Bangalore and bye"
-Echo "$Person1:: ok bye ...Fuck off  $Person2"
+echo "$Person1:: Hi $Person2, how are you"
+echo "$Person2:: I am dng good, what about u $Person1"
+echo "$Person1:: that's good to hear, where are u now ..? "
+echo "$Person2:: I am in Bangalore and bye"
+echo "$Person1:: ok bye ...Fuck off  $Person2"
