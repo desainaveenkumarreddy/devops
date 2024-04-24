@@ -25,18 +25,5 @@ fi
 dnf install mysql -y 
 VALIDATE $1 'Installing MYSQL SERVER'
 
-<<<<<<< HEAD
-=======
-<<comment
-if [ $? -ne o ]
-then
-    echo "MYSQUL installation failed....."
-    exit 1
-else 
-    echo "Successfully SQL Installed"
-fi
-comment
-
->>>>>>> 71fd494116732b29a52f5fe7f3bc344a454680e6
 dnf install git -y
 VALIDATE $1 'Installing GIT'
