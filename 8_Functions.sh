@@ -8,7 +8,7 @@ LOCAL_FILE=/temp/$SCRIPT_NAME-$TIMESTAMP.log
 VALIDATE(){
     #echo "Exit Status : $1"
     #echo "What Command is doing : $2"
-    if [ $1 -ne 0]
+    if [ $1 -ne 0 ]
     then  
         echo " $2 is ...FAILURE "
         exit 1
