@@ -1,19 +1,19 @@
-#!bin/bash
+#!/bin/bash
 
 USERID=$(id -u)
-TIMESTAMP=$(date +%F-H-%M-%S)
-SCRIPT_NAME=$(echo $0 |cut -d '.' -f1)  # File name delimiting with ''.'' (ex:8_Functions.sh--->8_Functions)
-LOGFILE=/temp/$SCRIPT_NAME-$TIMESTAMP.log
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)  # File name delimiting with ''.'' (ex:8_Functions.sh--->8_Functions)
+LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 VALIDATE(){
     #echo "Exit Status : $1"
     #echo "What Command is doing : $2"
     if [ $1 -ne 0 ]
     then  
-        echo " $2 is ...FAILURE "
+        echo "$2...FAILURE "
         exit 1
     else 
-        echo " $1 is ... SUCCESS"
+        echo "$1... SUCCESS"
     fi
 }
 
