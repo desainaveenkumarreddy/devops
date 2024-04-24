@@ -1,1 +1,0 @@
-this is the sample for pushing file to git repo
