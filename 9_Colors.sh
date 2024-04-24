@@ -5,10 +5,10 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)  # File name delimiting with ''.'' (ex:8_Functions.sh--->8_Functions)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
-R=\e[31m
-G=\e[32m
-Y=\e[33m
-N=\e[0m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 echo "Script started Time Stamp is : $TIMESTAMP"
 
