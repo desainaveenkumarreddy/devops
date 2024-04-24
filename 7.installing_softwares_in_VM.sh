@@ -6,7 +6,6 @@ if [ $USERID -ne 0 ]
 then
     echo "Ur not root user to run this command"
     exit 1  # exit command is used to come back manually if the abive command get failed
-
 else 
     echo "U are root user"
 fi
