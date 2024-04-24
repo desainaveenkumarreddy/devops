@@ -3,7 +3,7 @@
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-H-%M-%S)
 SCRIPT_NAME=$(echo $0 |cut -d '.' -f1)  # File name delimiting with ''.'' (ex:8_Functions.sh--->8_Functions)
-LOCAL_FILE=/temp/$SCRIPT_NAME-$TIMESTAMP.log
+LOGFILE=/temp/$SCRIPT_NAME-$TIMESTAMP.log
 
 VALIDATE(){
     #echo "Exit Status : $1"
@@ -25,8 +25,8 @@ else
     echo "U are root user"
 fi
 
-dnf install mysql -y &>>$LOCAL_FILE
-VALIDATE $1 'Installing MYSQL SERVER'
+dnf install mysql -y &>>$LOGFILE
+VALIDATE $? 'Installing MYSQL SERVER'
 
-dnf install git -y &>>$LOCAL_FILE
-VALIDATE $1 'Installing GIT'
+dnf install git -y &>>$LOGFILE
+VALIDATE $? 'Installing GIT'
