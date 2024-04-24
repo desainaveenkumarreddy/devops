@@ -34,8 +34,8 @@ fi
 
 for i in $@
 do
-    echo "Package Installing : $i"
-    dnf list installed $1 &>>$LOGFILE
+    echo "Package to Install : $i"
+    dnf list installed $i &>>$LOGFILE
     
     if [ $? -eq 0 ]
     then 
