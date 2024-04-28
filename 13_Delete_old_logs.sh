@@ -22,4 +22,4 @@ echo "Files to Delete : $Files"
 while IFS = read -r line
 do
     echo "Deleting log files : $line"
-done >>> $Files
+done <<< $Files
