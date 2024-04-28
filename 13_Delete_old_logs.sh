@@ -17,3 +17,4 @@ fi
 
 Files=$(find $Source_Directory -name "*.logs" -mtime +14)
 
+echo "Files to Delete : $Files"
