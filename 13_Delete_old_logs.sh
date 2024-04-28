@@ -19,7 +19,7 @@ Files=$(find $Source_Directory -name "*.logs" -mtime +14)
 
 echo "Files to Delete : $Files"
 
-while IFS = read -r line
+while IFS= read -r line
 do
     echo "Deleting log files : $line"
 done <<< $Files
