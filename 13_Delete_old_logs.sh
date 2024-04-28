@@ -1,13 +1,13 @@
 #!bin/bash
 
-Source_Directory=/tmp
+Source_Directory=/tmp/app-logs
 
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-if [ -d $Source_Directory]
+if [ -d $Source_Directory ]
 then 
     echo -e "$G Directory is present $N"
 else    
