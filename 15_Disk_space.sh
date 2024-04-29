@@ -11,9 +11,16 @@ do
 
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
-        Message="$FOLDER is Grater than THRESHOLD , Current Usage is : $USAGE"
+        Message+="$FOLDER is Grater than THRESHOLD , Current Usage is : $USAGE \n" 
+        # + is for not overwriting the output and getting old and new logs 
+        # \n is for getting output line by line instud of single line
     fi
 
 done <<< $DISK_USAGE
 
-echo "Message : $Message"
+echo -e "Message : $Message"
+# -e is used to end as special characters
+
+echo "$MESSAGE" | mail -s "Disk Usage Alert" info@joindevops.com
+
+# echo "body" | mail -s "subject" to-address
