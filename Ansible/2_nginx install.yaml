@@ -3,7 +3,7 @@
   become: yes # getting root acciss
   tasks:
   - name: installing ngnix
-    ansible.builtin.dnf:
+    ansible.builtin.package:
       names: ngninx
       state: latest
   - name: enabling ngnix
