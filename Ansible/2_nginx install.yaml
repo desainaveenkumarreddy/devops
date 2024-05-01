@@ -4,7 +4,7 @@
   tasks:
   - name: installing ngnix
     ansible.builtin.package:
-      names: ngninx
+      names: nginx
       state: latest
   - name: enabling ngnix
     ansible.builtin.service:
