@@ -2,9 +2,11 @@
   hosts: web
   become: yes # getting root acciss
   tasks:
-  - name: installing ngnix and enabling 
-    ansible.builtin.package:
-    name: ngninx
-    state: installed
+  - name: installing ngnix
+    ansible.builtin.dnf:
+    names: ngninx
+    state: latest
+  - name: enabling ngnix
+    ansible.builtin.service:
+    name: ngnix
     enabled: yes
- 
