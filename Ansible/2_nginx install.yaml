@@ -4,9 +4,9 @@
   tasks:
   - name: installing ngnix
     ansible.builtin.dnf:
-    names: ngninx
-    state: latest
+      names: ngninx
+      state: latest
   - name: enabling ngnix
     ansible.builtin.service:
-    name: ngnix
-    enabled: yes
+      name: ngnix
+      enabled: yes
