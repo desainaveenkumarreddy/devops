@@ -1,0 +1,13 @@
+- name: inastall ngnix and start service
+  hosts: web
+  become: yes # this is equal to get root access
+  tasks: 
+    - name: installing ngnix
+      ansible.builtin.dnf:
+        name: ngnix
+        state: latest
+    - name: start and enable ngnix
+      ansible.builtin.service:
+        name: ngnix
+        state: started
+        enabled: yes
