@@ -1,0 +1,14 @@
+- name: Play 1 and Task 1
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: paly 1 and task 1
+      ansible.builtin.debug:
+        msg: "Hello i am learining ansible play 1"
+- name: paly 2 and task 2
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: paly 2 and task 2
+      ansible.builtin.debug:
+        msg: "laraining ansible tasks 2"
