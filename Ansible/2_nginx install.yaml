@@ -1,0 +1,10 @@
+- name: install and enable nginx
+  hosts: web
+  become: yes # getting root acciss
+  tasks:
+  - name: installing ngnix and enabling 
+    ansible.builtin.package:
+    name: ngninx
+    state: installed
+    enabled: yes
+ 
