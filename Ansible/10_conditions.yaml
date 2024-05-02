@@ -3,7 +3,7 @@ hosts: localhost
 become: yes
 tasks:
 - name: Check user exist or not
-  ansible.builtin.command: id expence
+  ansible.builtin.command: id expense
   register: USER
   ignore_errors: True
 
@@ -12,7 +12,7 @@ tasks:
     msg: "User info: {{USER}}"
 
 - name: Create user
-  ansible.builtin.command: useradd expence
+  ansible.builtin.command: useradd expense
   when: USER.rc != 0 # conditon when this tasks to run
 
 - name: Testing if ansible have Idompatency
