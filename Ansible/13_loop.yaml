@@ -1,0 +1,11 @@
+- name: Learning loop
+  hosts: localhost
+  tasks:
+  - name: print names
+    ansible.builtin.debug:
+      msg: "Hello {{loop}}"
+    loop:
+      - SQL
+      - Linux
+      - Ansible
+      - DevOps
