@@ -3,7 +3,7 @@
   tasks:
   - name: print names
     ansible.builtin.debug:
-      msg: "Hello {{loop}}"
+      msg: "Hello {{ loop }}"
     loop:
     - SQL
     - Linux
