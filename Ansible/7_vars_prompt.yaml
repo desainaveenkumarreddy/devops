@@ -1,0 +1,12 @@
+- name: Assigning variables using prompt
+  hosts: localhost
+  vars_prompt:
+    - name: USERNAME
+      prompt: please enter username
+      private: false
+    - name: PASSWORD
+      prompt: please enter password
+      private: false
+  - name: Verfing the prompt variables
+    ansible.builtin.debug:
+    msg: "Please enter username: {{USERNAME}}: password: {{PASSWORD}}"
