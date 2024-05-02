@@ -15,4 +15,3 @@
   - name: Entering all the datatype variables
     ansible.buildin.debug:
       msg: "Please enter all {{Course}} & {{Softwares}} & {{Experiance}} & {{Areyouworking}}"
-    
