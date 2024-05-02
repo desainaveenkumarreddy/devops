@@ -6,7 +6,6 @@
     Duration: 10Hrs
   tasks:
     - name: this is play level variables
-
       ansible.builtin.debug:
         msg: "Here i am learining {{Course}} and Duration is {{Duration}} "
     - name: here i am using tasks level variables

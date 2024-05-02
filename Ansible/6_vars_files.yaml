@@ -1,0 +1,8 @@
+- name: Variables assigning from out side file #files is vars.yaml
+  hosts: localhost
+  vars_files:
+   - vars.yaml
+  tasks:
+  - name: this is play level variables
+    ansible.builtin.debug:
+      msg: "Here i am learining {{Course}} and Duration is {{Duration}} "
