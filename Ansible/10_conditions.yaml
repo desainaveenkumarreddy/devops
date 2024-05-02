@@ -1,4 +1,4 @@
-- name: Conditions and storing the command output as a variable # same as A=$(id expence)
+- name: Conditions and storing the command output as a variable 
 hosts: localhost
 become: yes
 tasks:
@@ -6,7 +6,7 @@ tasks:
     ansible.builtin.command: id expence
     register: USER
     ignore_errors: True
-  
+
   - name: store USER value
     ansible.builtin.debug:
       msg: "User info: {{USER}}"
