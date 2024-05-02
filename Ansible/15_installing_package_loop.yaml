@@ -7,6 +7,6 @@
       name: "{{ item.name }}"
       state: "{{ item.state }}"
     loop:
-    - { name: 'MYSQL' , state: 'latest'}
+    - { name: 'MYSQL' , state: 'latest'} # Items
     - { name: 'Ansible' , state: 'latest'}
     - { name: 'Docker' , state: 'latest' }
