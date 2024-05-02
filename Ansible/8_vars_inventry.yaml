@@ -1,0 +1,5 @@
+- name: Assigning variables using inventory
+  hosts: localhost
+  - tasks:
+    ansible.builtin.debug:
+      msg: "Hi, I am Learining {{Course}} in Duration {{Suration}}"
