@@ -1,5 +1,5 @@
 - name: Conditions and storing the command output as a variable 
-hosts: localhost
+hosts: web
 become: yes
 tasks:
 - name: Check user exist or not
