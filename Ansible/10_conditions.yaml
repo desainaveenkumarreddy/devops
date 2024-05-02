@@ -1,20 +1,20 @@
 - name: Conditions and storing the command output as a variable 
-hosts: web
-become: yes
-tasks:
-- name: Check user exist or not
-  ansible.builtin.command: id expense
-  register: USER
-  ignore_errors: True
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Check user exist or not
+    ansible.builtin.command: id expense
+    register: USER
+    ignore_errors: True
 
-- name: store USER value
-  ansible.builtin.debug:
-    msg: "User info: {{USER}}"
+  - name: store USER value
+    ansible.builtin.debug:
+      msg: "User info: {{USER}}"
 
-- name: Create user
-  ansible.builtin.command: useradd expense
-  when: USER.rc != 0 # conditon when this tasks to run
+  - name: Create user
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0 # conditon when this tasks to run
 
-- name: Testing if ansible have Idompatency
-  ansible.builtin.debug:
-    msg: "Testing" 
+  - name: Testing if ansible have Idompatency
+    ansible.builtin.debug:
+      msg: "Testing" 
