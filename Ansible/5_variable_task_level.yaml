@@ -1,0 +1,17 @@
+- name: Variables for task level and play level difference 
+  hosts: localhost
+  become: yes
+  vars : # if we mention variables here then this is called play level variables
+    Course: Ansible
+    Duration: 10Hrs
+  tasks:
+    - name: this is play level variables
+
+      ansible.builtin.debug:
+        msg: "Here i am learining {{Course}} and Duration is {{Duration}} "
+    - name: here i am using tasks level variables
+      vars : # if we specify variables here then this is called task leave variables
+        Course: Terraform
+        Duration: 20Hrs
+      ansible.builtin.debug:
+        msg: "Here i am learining {{Course}} and Duration is {{Duration}}"
