@@ -5,7 +5,7 @@
     ansible.builtin.debug:
       msg: "Hello {{loop}}"
     loop:
-      - SQL
-      - Linux
-      - Ansible
-      - DevOps
+    - SQL
+    - Linux
+    - Ansible
+    - DevOps
